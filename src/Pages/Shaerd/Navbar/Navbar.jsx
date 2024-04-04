@@ -1,9 +1,18 @@
 import { NavLink } from "react-router-dom";
-import user from '../../../assets/assets/user.png';
+import users from '../../../assets/assets/user.png';
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/Authprovider";
 
 const Navbar = () => {
+ const handelLogOut=()=>{
+      logOut()
+      .then()
+      .then()
+ }
+  const {user,logOut}=useContext(AuthContext);
+
     const navBar=<>
-        <li><NavLink className='no-underline'>Home</NavLink></li>
+        <li><NavLink to='/' className='no-underline'>Home</NavLink></li>
         <li><NavLink className='no-underline'>About</NavLink></li>
         <li><NavLink className='no-underline'>Career</NavLink></li>
     </>
@@ -27,8 +36,12 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
          <div className="flex gap-4 items-center">
-         <img src={user} className="w-12 h-12 "/>
-         <NavLink  to='/login' className="py-4 px-6 no-underline bg-black text-white">LOGIN</NavLink>
+         <img src={users} className="w-12 h-12 "/>
+         {
+          user ? <button onClick={handelLogOut} className=" py-4 px-6 no-underline bg-black text-white  font-bold">Sign Out</button> :
+          <NavLink  to='/login' className="py-4 px-6 no-underline bg-black text-white">LOGIN</NavLink>
+         }
+       
          </div>
         </div>
       </div>
