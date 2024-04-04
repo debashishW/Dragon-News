@@ -2,7 +2,7 @@ import { FaGoogle,FaGithub,FaInstagram,FaFacebook,FaXTwitter   } from "react-ico
 import QZone1 from '../../../assets/assets/qZone1.png';
 import QZone2 from '../../../assets/assets/qZone2.png';
 import QZone3 from '../../../assets/assets/qZone3.png';
-import bgImage from '../../../assets/assets/bg.png'
+import bgImage from '../../../assets/assets/bg.png';
 const RNav = () => {
     return (
         <div>
@@ -27,10 +27,10 @@ const RNav = () => {
             <img src={QZone3} />
             </div>
           </div>
-          <div className="bg-[url('bgImage')]">
-            <h3>Create an Amazing Newspaper</h3>
-            <p>Discover thousands of options, easy to customize layouts, one-click to import demo and much more.</p>
-            <button className="btn bg-[#D72050] text-white">Learn More</button>
+          <div className="px-9 py-10" style={{backgroundImage:`url(${bgImage})`}}>
+            <h3 className="text-white text-4xl font-bold text-center">Create an Amazing Newspaper</h3>
+            <p className="text-white leading-7 text-center">Discover thousands of options, easy to customize layouts, one-click to import demo and much more.</p>
+            <button className="btn bg-[#D72050] p-4 border-none ml-6 w-40 text-white">Learn More</button>
           </div>
         </div>
     );
