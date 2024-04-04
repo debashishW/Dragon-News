@@ -14,7 +14,7 @@ const LNav = () => {
         .then(data=>setNews(data))
     },[])
     return (
-        <div>
+        <div className="lg:w-72">
            <h3 className="text-2xl">All Caterogy</h3> 
            <h3 className="bg-gray-200 py-4 px-8 text-center rounded-lg">National News</h3>
            <div className="text-left ml-20 text-[#9F9F9F] font-medium text-xl">
@@ -22,7 +22,7 @@ const LNav = () => {
                 news.map((newDetails,idx)=><LNavDetails key={idx} newDetails={newDetails}></LNavDetails>)
             }
            </div>
-           <div className=" w-96 bg-base-100 ">
+           <div className=" w-72 bg-base-100 ">
   <figure><img src={image1} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">Bayern Slams Authorities Over Flight Delay to Club World Cup</h2>
@@ -33,7 +33,7 @@ const LNav = () => {
    
   </div>
 </div>
-<div className=" w-96 bg-base-100 ">
+<div className=" w-72 bg-base-100 ">
   <figure><img src={image2} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">Bayern Slams Authorities Over Flight Delay to Club World Cup</h2>
@@ -44,7 +44,7 @@ const LNav = () => {
    
   </div>
 </div>
-<div className=" w-96 bg-base-100 ">
+<div className=" w-72  bg-base-100 ">
   <figure><img src={image3} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">Bayern Slams Authorities Over Flight Delay to Club World Cup</h2>
